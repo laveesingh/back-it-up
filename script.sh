@@ -121,3 +121,12 @@ cd $USBPATH
 recur /media/usb_dir
 
 echo "${Green}backup is complete!!!${NC}"
+
+echo "${Green}compressing the archive...${NC}"
+
+cd ~/Desktop/
+#zip backup.zip backup
+7z a -p backup.7z backup
+rm -rf backup/
+
+echo "${Green}done!!!${NC}"
