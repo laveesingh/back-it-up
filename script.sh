@@ -25,7 +25,7 @@ NC='\033[0m'
 # some standard paths
 
 
-USBLINK="/dev/sdb1"
+USBLINK=$1
 USBPATH="/media/usb_dir/"
 BACKPATH="~/Desktop/backup/"
 
@@ -82,7 +82,7 @@ recur(){
 # and remount the drive properly
 
 # umount the usb
-sudo umount $USBLINK
+sudo umount "${USBLINK}"
 
 # check if directory for mounting doesn't exist
 if [ ! -d $USBPATH ]; then
@@ -119,3 +119,5 @@ cd $USBPATH
 
 # Run the traversal
 recur /media/usb_dir
+
+echo "${Green}backup is complete!!!${NC}"
