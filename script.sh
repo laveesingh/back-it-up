@@ -1,5 +1,8 @@
 #! /bin/sh
 
+# This script is just for practice purposes, otherwise
+# there are advanced copy commands available in bash.
+
 
 # color codes
 
